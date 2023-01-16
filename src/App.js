@@ -1,23 +1,55 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import NavBar from "./Components/NavBar";
+import Home from "./Pages/Home";
+import LatestNews from "./Pages/LatestNews";
 
 function App() {
+  const [articles, setArticles] = useState([]);
+
+  function api() {
+
+    axios
+      .get(
+        "https://www.reddit.com/r/UpliftingNews.json?listing=best&limit=50&timeframe=week"
+      )
+      .then((res) => {
+        /*for (let i = 0; i < num; i++) {
+          setArray((array) => [...array, res.data.data.children[i]]);
+          //console.log(articles[i]);
+        }*/
+        setArticles(res.data.data.children);
+      });
+  }
+
+  useEffect(() => {
+    api();
+    
+  }, []);
+
+  let num = 6;
+  const [array, setArray] = useState([]);
+
+  useEffect(() => {
+    //console.log("running");
+    //console.log(articles);
+
+    
+    //console.log(array);
+  }, [articles]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<Home articles={articles} />} />
+          <Route path="/latest" element={<LatestNews />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

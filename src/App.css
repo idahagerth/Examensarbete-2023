@@ -1,5 +1,15 @@
 .App {
   text-align: center;
+  background-color: #20315a;
+  
+  
+  /*#f4f3ee*/
+}
+.h1{
+  font-family: 'DM Serif Display', serif;
+  color: #ffd972;
+  padding-top: 25px;
+  font-style: "italic"; 
 }
 
 .App-logo {
@@ -25,7 +35,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #000000;
 }
 
 @keyframes App-logo-spin {
