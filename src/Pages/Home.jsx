@@ -37,6 +37,7 @@ function Home({ articles }) {
           justifyContent: "center",
           gap: "30px",
           paddingTop: "19%",
+          marginBottom:"auto"
         }}
       >
         {showingArticles.map((item, index) => {
@@ -44,7 +45,7 @@ function Home({ articles }) {
           let date = new Date(timeStamp * 1000);
 
           return (
-            <div style={{ flexBasis: "30%", height: "370px" }}>
+            <div style={{ flexBasis: "30%", height: "390px" }}>
               <Card
                 style={{
                   backgroundColor: "#20315a",
@@ -92,7 +93,9 @@ function Home({ articles }) {
             </div>
           );
         })}
-        <PagiNation setPage={setPage} page={page} />
+       <div style={{ position: "absolute", top: "165vh", marginTop:"20px" }}>
+          <PagiNation setPage={setPage} page={page} />
+        </div>
       </div>
     </div>
   );

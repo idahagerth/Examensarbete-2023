@@ -6,6 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import NavBar from "./Components/NavBar";
 import Home from "./Pages/Home";
 import LatestNews from "./Pages/LatestNews";
+import Footer from "./Components/Footer";
 
 function App() {
   const [articles, setArticles] = useState([]);
@@ -34,21 +35,19 @@ function App() {
   const [array, setArray] = useState([]);
 
   useEffect(() => {
-    //console.log("running");
-    //console.log(articles);
-
-    
-    //console.log(array);
+ 
   }, [articles]);
 
   return (
     <div className="App">
       <BrowserRouter>
         <NavBar />
+        
         <Routes>
           <Route path="/" element={<Home articles={articles} />} />
           <Route path="/latest" element={<LatestNews />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </div>
   );
