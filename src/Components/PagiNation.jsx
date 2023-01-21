@@ -3,7 +3,7 @@ import Pagination from "react-bootstrap/Pagination";
 function PagiNation({setPage,page}) {
   return (
     <div>
-      <Pagination size="lg" >
+      <Pagination size="lg">
       <Pagination.First onClick={() => setPage(1)} />
       <Pagination.Prev onClick={() => {page === 1 ?setPage(1) : setPage(page -1)}} />
       <Pagination.Item active={1 === page} key={1} onClick={() => setPage(1)}>1</Pagination.Item>

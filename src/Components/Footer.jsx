@@ -7,11 +7,10 @@ function Footer() {
           fontWeight: "bolder",
           paddingTop: "15px",
           paddingLeft: "85%",
-          fontFamily:"Open Sans', sans-serif"
+          fontFamily: "Open Sans', sans-serif",
         }}
       >
-        
-    Made By Ida Hägerth
+        Made By Ida Hägerth
       </h2>
     </div>
   );

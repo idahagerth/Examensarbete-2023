@@ -1,3 +1,4 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
 .App {
   text-align: center;
   background-color: #20315a;
@@ -11,6 +12,41 @@
   padding-top: 25px;
   font-style: "italic"; 
 }
+
+.page-link {
+  position: relative;
+  display: block;
+  padding: var(--bs-pagination-padding-y) var(--bs-pagination-padding-x);
+  font-size: var(--bs-pagination-font-size);
+  color: #ffd972;
+  text-decoration: none;
+  background-color: #20315a;
+  border: var(--bs-pagination-border-width) solid #20315a;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+[role=button] {
+  cursor: pointer;
+}
+.page-link {
+  position: relative;
+  display: block;
+  padding: var(--bs-pagination-padding-y) var(--bs-pagination-padding-x);
+  font-size: var(--bs-pagination-font-size);
+  color: var(#20315a);
+  text-decoration: none;
+  background-color: #20315a;
+ 
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.pagination {
+  
+  --bs-pagination-active-bg: #20315a;
+  --bs-pagination-active-border-color: #20315a;
+  --bs-pagination-hover-bg: #20315a;
+  --bs-pagination-hover-bg: #20315a;
+  --bs-pagination-hover-color: #ffd972;
+}
+
 
 .App-logo {
   height: 40vmin;

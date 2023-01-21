@@ -2,7 +2,7 @@ import "./App.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
+//import "bootstrap/dist/css/bootstrap.min.css";
 import NavBar from "./Components/NavBar";
 import Home from "./Pages/Home";
 import LatestNews from "./Pages/LatestNews";

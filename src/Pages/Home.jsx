@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Card from "react-bootstrap/Card";
 import { FiExternalLink } from "react-icons/fi";
 import PagiNation from "../Components/PagiNation";
+import { motion } from "framer-motion";
 
 function Home({ articles }) {
   const [page, setPage] = useState(1);
@@ -28,16 +29,33 @@ function Home({ articles }) {
         height: "170vh",
       }}
     >
+       <motion.div
+        initial={{ x: "+100%", opacity: 0 }}
+        animate={{ x: 1, opacity: 1 }}
+        transition={{
+          duration: 1.5,
+          ease: "easeIn",
+          type: "spring",
+        }}
+        >
       <h1 className="h1">Good news around the world</h1>
+     </motion.div>
 
-      <div
+      <motion.div
+        initial={{ x: "+100%", opacity: 0 }}
+        animate={{ x: 1, opacity: 1 }}
+        transition={{
+          duration: 5,
+          ease: "easeIn",
+          type: "spring",
+        }}
         style={{
           display: "flex",
           flexWrap: "wrap",
           justifyContent: "center",
           gap: "30px",
           paddingTop: "19%",
-          marginBottom:"auto"
+          marginBottom: "auto",
         }}
       >
         {showingArticles.map((item, index) => {
@@ -93,9 +111,16 @@ function Home({ articles }) {
             </div>
           );
         })}
-       <div style={{ position: "absolute", top: "165vh", marginTop:"20px" }}>
-          <PagiNation setPage={setPage} page={page} />
-        </div>
+      </motion.div>
+      <div
+        style={{
+          position:"absolute",
+          top:"168vh",
+          paddingLeft:"23%"
+          
+        }}
+      >
+        <PagiNation setPage={setPage} page={page} />
       </div>
     </div>
   );
