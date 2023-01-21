@@ -10,6 +10,7 @@ import Footer from "./Components/Footer";
 
 function App() {
   const [articles, setArticles] = useState([]);
+  const [newArticles,setNewArticles] = useState([])
 
   function api() {
 
@@ -18,16 +19,21 @@ function App() {
         "https://www.reddit.com/r/UpliftingNews.json?listing=best&limit=50&timeframe=week"
       )
       .then((res) => {
-        /*for (let i = 0; i < num; i++) {
-          setArray((array) => [...array, res.data.data.children[i]]);
-          //console.log(articles[i]);
-        }*/
+        
         setArticles(res.data.data.children);
       });
   }
 
+  function Latest() {
+    axios.get("http://www.reddit.com/r/UpliftingNews/new.json?sort=new&limit=4").then((res) => {
+      setNewArticles(res.data.data.children);
+    });
+  }
+
+
   useEffect(() => {
     api();
+    Latest();
     
   }, []);
 
@@ -38,6 +44,8 @@ function App() {
  
   }, [articles]);
 
+
+
   return (
     <div className="App">
       <BrowserRouter>
@@ -45,7 +53,7 @@ function App() {
         
         <Routes>
           <Route path="/" element={<Home articles={articles} />} />
-          <Route path="/latest" element={<LatestNews />} />
+          <Route path="/latest" element={<LatestNews newArticles={newArticles} />} />
         </Routes>
         <Footer />
       </BrowserRouter>
