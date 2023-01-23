@@ -2,7 +2,6 @@ import "./App.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-//import "bootstrap/dist/css/bootstrap.min.css";
 import NavBar from "./Components/NavBar";
 import Home from "./Pages/Home";
 import LatestNews from "./Pages/LatestNews";
@@ -11,6 +10,9 @@ import Footer from "./Components/Footer";
 function App() {
   const [articles, setArticles] = useState([]);
   const [newArticles, setNewArticles] = useState([]);
+  const [isMobile, setIsMobile] = useState(false);
+
+
 
   function api() {
     axios
@@ -40,19 +42,30 @@ function App() {
 
   useEffect(() => {}, [articles]);
 
+
+  useEffect(() => {
+    return window.addEventListener("resize", () => {
+      window.outerWidth < 425 ? setIsMobile(true) : setIsMobile(false);
+    });
+  }, []);
+
+  useEffect(() => {
+    return window.outerWidth < 425 ? setIsMobile(true) : setIsMobile(false);
+  }, []);
+
   return (
     <div className="App">
       <BrowserRouter>
-        <NavBar />
+        <NavBar isMobile={isMobile} />
 
         <Routes>
-          <Route path="/" element={<Home articles={articles} />} />
+          <Route path="/" element={<Home articles={articles} isMobile={isMobile} />} />
           <Route
             path="/latest"
-            element={<LatestNews newArticles={newArticles} />}
+            element={<LatestNews newArticles={newArticles} isMobile={isMobile} />}
           />
         </Routes>
-        <Footer />
+        <Footer isMobile={isMobile}/>
       </BrowserRouter>
     </div>
   );

@@ -1,4 +1,4 @@
-function Footer() {
+function Footer({ isMobile }) {
   return (
     <div style={{ backgroundColor: "#f4f3ee", paddingBottom: "10px" }}>
       <h2
@@ -6,7 +6,7 @@ function Footer() {
           fontSize: "15px",
           fontWeight: "bolder",
           paddingTop: "15px",
-          paddingLeft: "85%",
+          paddingLeft: isMobile ? "5%" : "85%",
           fontFamily: "Open Sans', sans-serif",
         }}
       >

@@ -3,8 +3,9 @@ import Card from "react-bootstrap/Card";
 import { FiExternalLink } from "react-icons/fi";
 import PagiNation from "../Components/PagiNation";
 import { motion } from "framer-motion";
+import IsMobilePages from "../Components/IsMobilePages";
 
-function Home({ articles }) {
+function Home({ isMobile, articles }) {
   const [page, setPage] = useState(1);
   const [showingArticles, setShowingArticles] = useState([]);
   const [startNumb, setStartNumb] = useState(1);
@@ -24,12 +25,12 @@ function Home({ articles }) {
       style={{
         backgroundImage: "url('img/hej.gif')",
         backgroundRepeat: "no-repeat",
-        backgroundPosition: "center top",
-        backgroundSize: "40% auto",
-        height: "170vh",
+        backgroundPosition: isMobile ? "top 30px left 60px" : "center top",
+        backgroundSize: isMobile ? "70% auto" : "40% auto",
+        height: isMobile ? "240vh" : "170vh",
       }}
     >
-       <motion.div
+      <motion.div
         initial={{ x: "+100%", opacity: 0 }}
         animate={{ x: 1, opacity: 1 }}
         transition={{
@@ -37,9 +38,11 @@ function Home({ articles }) {
           ease: "easeIn",
           type: "spring",
         }}
-        >
-      <h1 className="h1">Good news around the world</h1>
-     </motion.div>
+      >
+        <h1 style={{ fontSize: isMobile ? "25px" : null }} className="h1">
+          Good News Around The World
+        </h1>
+      </motion.div>
 
       <motion.div
         initial={{ x: "+100%", opacity: 0 }}
@@ -54,7 +57,7 @@ function Home({ articles }) {
           flexWrap: "wrap",
           justifyContent: "center",
           gap: "30px",
-          paddingTop: "19%",
+          paddingTop: isMobile ? "35%" : "19%",
           marginBottom: "auto",
         }}
       >
@@ -63,7 +66,13 @@ function Home({ articles }) {
           let date = new Date(timeStamp * 1000);
 
           return (
-            <div style={{ flexBasis: "30%", height: "390px" }}>
+            <div
+              key={index}
+              style={{
+                flexBasis: isMobile ? "100%" : "30%",
+                height: isMobile ? "250px" : "390px",
+              }}
+            >
               <Card
                 style={{
                   backgroundColor: "#20315a",
@@ -114,13 +123,16 @@ function Home({ articles }) {
       </motion.div>
       <div
         style={{
-          position:"absolute",
-          top:"168vh",
-          paddingLeft:"23%"
-          
+          position: "absolute",
+          top: isMobile ? "228vh" : "168vh",
+          paddingLeft:isMobile ? "8%": "23%"
         }}
       >
-        <PagiNation setPage={setPage} page={page} />
+        {isMobile ? (
+          <IsMobilePages setPage={setPage} page={page} />
+        ) : (
+          <PagiNation setPage={setPage} page={page} />
+        )}
       </div>
     </div>
   );

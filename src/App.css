@@ -2,15 +2,12 @@
 .App {
   text-align: center;
   background-color: #20315a;
-  
-  
-  /*#f4f3ee*/
 }
-.h1{
-  font-family: 'DM Serif Display', serif;
+.h1 {
+  font-family: "DM Serif Display", serif;
   color: #ffd972;
   padding-top: 25px;
-  font-style: "italic"; 
+  font-style: "italic";
 }
 
 .page-link {
@@ -22,9 +19,10 @@
   text-decoration: none;
   background-color: #20315a;
   border: var(--bs-pagination-border-width) solid #20315a;
-  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
-[role=button] {
+[role="button"] {
   cursor: pointer;
 }
 .page-link {
@@ -35,19 +33,24 @@
   color: var(#20315a);
   text-decoration: none;
   background-color: #20315a;
- 
-  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 .pagination {
-  
   --bs-pagination-active-bg: #20315a;
-  --bs-pagination-active-border-color: #20315a;
+  --bs-pagination-active-border-color:none;
   --bs-pagination-hover-bg: #20315a;
   --bs-pagination-hover-bg: #20315a;
   --bs-pagination-hover-color: #ffd972;
   --bs-pagination-hover-border-color: #20315a;
+  --bs-pagination-focus-bg: none;
+  --bs-pagination-active-border-color: #20315a;
+  --bs-pagination-color: none;
+  --bs-pagination-focus-color: #ffffff;
+  --bs-pagination-active-border-color: #20315a;
+  --bs-pagination-color: none;
 }
-
 
 .App-logo {
   height: 40vmin;
