@@ -4,9 +4,9 @@ import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 
-function LatestNews({ newArticles }) {
+function LatestNews({ newArticles, isMobile }) {
   return (
-    <div style={{ backgroundColor: "#a4ac86", height: "110vh" }}>
+    <div style={{ backgroundColor: "#a4ac86", height: isMobile ? "230vh" : "130vh" }}>
       <motion.div
         initial={{ x: "+100%", opacity: 0 }}
         animate={{ x: 1, opacity: 1 }}
@@ -30,7 +30,7 @@ function LatestNews({ newArticles }) {
         <div style={{ display: "flex", justifyContent: "center" }}>
           <div
             style={{
-              width: "80%",
+              width: isMobile ? "340px" : "80%",
               paddingTop: "9%",
             }}
           >
@@ -41,14 +41,15 @@ function LatestNews({ newArticles }) {
                 return (
                   <Col key={index}>
                     <Card
-                    
                       style={{
                         border: "none",
                         backgroundColor: "#a4ac86",
-                        width: "250px",
+                        width: isMobile ? "340px" : "250px",
                       }}
                     >
-                      <Card.Img variant="top" src={item.data.thumbnail} />
+                      <div>
+                      <Card.Img  style={{width: isMobile ? "50%" : null}} variant="top" src={item.data.thumbnail} />
+                      </div>
                       <Card.Body>
                         <div style={{ width: "100%" }}>
                           <p

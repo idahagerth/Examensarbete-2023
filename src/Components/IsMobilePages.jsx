@@ -2,7 +2,7 @@ import { HiArrowUturnRight, HiArrowUturnLeft } from "react-icons/hi2";
 
 function IsMobilePages({ page, setPage }) {
   return (
-    <div style={{marginTop:"80px"}}>
+    <div style={{marginTop:"200px"}}>
       <a style={{float:"right",paddingLeft:"170px"}}
         href="#"
         onClick={() => {

@@ -27,7 +27,7 @@ function Home({ isMobile, articles }) {
         backgroundRepeat: "no-repeat",
         backgroundPosition: isMobile ? "top 30px left 60px" : "center top",
         backgroundSize: isMobile ? "70% auto" : "40% auto",
-        height: isMobile ? "240vh" : "170vh",
+        height: isMobile ? "265vh" : "170vh",
       }}
     >
       <motion.div
