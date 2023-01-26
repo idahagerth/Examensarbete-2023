@@ -6,7 +6,12 @@ import Row from "react-bootstrap/Row";
 
 function LatestNews({ newArticles, isMobile }) {
   return (
-    <div style={{ backgroundColor: "#a4ac86", height: isMobile ? "230vh" : "130vh" }}>
+    <div
+      style={{
+        backgroundColor: "#a4ac86",
+        height: isMobile ? "230vh" : "130vh",
+      }}
+    >
       <motion.div
         initial={{ x: "+100%", opacity: 0 }}
         animate={{ x: 1, opacity: 1 }}
@@ -48,7 +53,11 @@ function LatestNews({ newArticles, isMobile }) {
                       }}
                     >
                       <div>
-                      <Card.Img  style={{width: isMobile ? "50%" : null}} variant="top" src={item.data.thumbnail} />
+                        <Card.Img
+                          style={{ width: isMobile ? "50%" : null }}
+                          variant="top"
+                          src={item.data.thumbnail}
+                        />
                       </div>
                       <Card.Body>
                         <div style={{ width: "100%" }}>

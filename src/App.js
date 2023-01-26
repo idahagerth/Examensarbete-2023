@@ -12,8 +12,6 @@ function App() {
   const [newArticles, setNewArticles] = useState([]);
   const [isMobile, setIsMobile] = useState(false);
 
-
-
   function api() {
     axios
       .get(
@@ -42,7 +40,6 @@ function App() {
 
   useEffect(() => {}, [articles]);
 
-
   useEffect(() => {
     return window.addEventListener("resize", () => {
       window.outerWidth < 425 ? setIsMobile(true) : setIsMobile(false);
@@ -59,13 +56,18 @@ function App() {
         <NavBar isMobile={isMobile} />
 
         <Routes>
-          <Route path="/" element={<Home articles={articles} isMobile={isMobile} />} />
+          <Route
+            path="/"
+            element={<Home articles={articles} isMobile={isMobile} />}
+          />
           <Route
             path="/latest"
-            element={<LatestNews newArticles={newArticles} isMobile={isMobile} />}
+            element={
+              <LatestNews newArticles={newArticles} isMobile={isMobile} />
+            }
           />
         </Routes>
-        <Footer isMobile={isMobile}/>
+        <Footer isMobile={isMobile} />
       </BrowserRouter>
     </div>
   );

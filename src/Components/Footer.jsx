@@ -8,7 +8,7 @@ function Footer({ isMobile }) {
           paddingTop: "15px",
           paddingLeft: isMobile ? "5%" : "85%",
           fontFamily: "Open Sans', sans-serif",
-          color:"#7c7c7c"
+          color: "#7c7c7c",
         }}
       >
         Made By Ida Hägerth

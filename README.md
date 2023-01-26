@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+# Good News Around The World
+#### The main purpose of my App “Good News! For me, and other users, to get some positive and fun information that has happened around the world, I got my idea from reading the “regular” news and thinking that I rarely see happy news. 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<br>
 
-## Available Scripts
+#### I know that good things are also happening around the world, And that changes are happening! That almost never gets mentioned.
 
-In the project directory, you can run:
+<br>
 
-### `npm start`
+#### I feel so much more inspired everyday reading good news and that there is hope for the future, even when it feels really shitty. 
+ 
+<br>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### This is my "Master Thesis" for my frontend / App development education that started in 2021. It's an app that shows good news around the world. Enjoy!
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<br>
 
-### `npm test`
+### Modules I used for this project:
+* Axios:
+  * I used Axios to craft an API requests from Reddit`s API, I chose axios because I have the most experience with that module, as we used it in previous projects.
+* Bootstrap:
+  * With good responsive development of mobile-first websites, Bootstrap provided me a collection of "easy use" design templates for me to choose between for my project.
+* Framer-motion:
+  * Was great to use for complex CSS animations for my website,that allowed me to make my text & pictures "float in" or "Ease-In"
+* React:
+  * Building interactive user interfaces and web applications quickly and efficiently with significantly less code than you would with vanilla JavaScript. In React, you develop your applications by creating reusable components that you can think of as independent Lego blocks. I chose to use React because we learned it in the course and it is also the industry standard.
+* React-bootstrap:
+  * It creates ready-made React components using the bootstrap framework. Styling is included so I don't have to mess around with vanilla CSS. 
+* React-icons:
+  * They have all the icons I want for my App.
+* React-router-bootstrap:
+  * Used for Bootstrap components to be compatible with "React Router" for exampel my "LinkContainer" component wraps Bootstrap "Navlink".
+* React-router-dom:
+  * React Router is a standard library for routing in React. It enables the navigation among views of various components in a React Application, allows changing the browser URL, and keeps the UI in sync with the URL. I learned it in the course and it very nice and clean to use. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<br>
 
-### `npm run build`
+#### My “work process” for this webpage was to first, Find a working API that was open source for me to use, And that was Reddit. 
+#### Once I got the API working and had all the information I needed. I started with the basics:
+ * Layout
+ * Amount of pages
+ * Navbar
+ * Footer
+ * And a “paginator” so users don't need to scroll the page
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<br>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### After the groundwork was added,I styled it with colors & fonts and my goal was for it to be very user friendly and easy to use. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<br>
 
-### `npm run eject`
+The last part of the project was to make it mobile friendly.
+I have applied all the knowledge & techniques I have learned from all my courses since starting in 2021. 
+#### For the “future” or development for this App, Could be to expand the API request and use different sources and add more good news stories. 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+  
+  

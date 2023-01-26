@@ -125,7 +125,7 @@ function Home({ isMobile, articles }) {
         style={{
           position: "absolute",
           top: isMobile ? "228vh" : "168vh",
-          paddingLeft:isMobile ? "8%": "23%"
+          paddingLeft: isMobile ? "8%" : "23%",
         }}
       >
         {isMobile ? (
