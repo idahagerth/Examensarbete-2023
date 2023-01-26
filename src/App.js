@@ -24,7 +24,7 @@ function App() {
 
   function Latest() {
     axios
-      .get("http://www.reddit.com/r/UpliftingNews/new.json?sort=new&limit=4")
+      .get("https://www.reddit.com/r/UpliftingNews/new.json?sort=new&limit=4")
       .then((res) => {
         setNewArticles(res.data.data.children);
       });
